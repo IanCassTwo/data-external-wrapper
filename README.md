@@ -8,6 +8,8 @@ data "external" "hello_world" {
         program = ["/usr/local/bin/data-external-wrapper", "/usr/local/bin/hello-world","--arg1","--arg2"]        
 }
 ...
-${data.external.hello_world.result.Result}
+output "hello_world_result" {
+  value = data.external.hello_world.result.Result
+}
 ```
 

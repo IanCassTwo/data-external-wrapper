@@ -7,7 +7,7 @@ This wrapper will ignore any json sent to it via the "query" argument. It will c
 data "external" "hello_world" {
         program = ["/usr/local/bin/data-external-wrapper", "/usr/local/bin/hello-world","--arg1","--arg2"]        
 }
-...
+
 output "hello_world_result" {
   value = data.external.hello_world.result.Result
 }
